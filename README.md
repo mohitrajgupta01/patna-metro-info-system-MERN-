@@ -35,6 +35,4 @@ A comprehensive MERN stack application providing verified information about Patn
 - Frontend runs on: http://localhost:3000
 - Backend runs on: http://localhost:5000
 
-## Verified Data
 
-All information about Patna Metro including stations, routes, and fares is based on official sources and regularly updated.
