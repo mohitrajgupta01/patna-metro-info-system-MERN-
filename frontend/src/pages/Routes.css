@@ -1,0 +1,213 @@
+.routes-page {
+  padding: 40px 0;
+  min-height: calc(100vh - 200px);
+}
+
+.routes-page h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.routes-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.route-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.route-card:hover {
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+.route-card.active {
+  box-shadow: 0 5px 30px rgba(102, 126, 234, 0.3);
+  border: 2px solid #667eea;
+}
+
+.route-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.route-header h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.route-status {
+  padding: 6px 16px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.route-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.summary-item .label {
+  color: #999;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.summary-item .value {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.route-details {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.route-details h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #667eea;
+}
+
+.station-list {
+  position: relative;
+  padding-left: 30px;
+}
+
+.station-item {
+  position: relative;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.station-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.station-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.station-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.station-code {
+  font-size: 0.8rem;
+  color: #999;
+  font-weight: 500;
+}
+
+.connection-line {
+  position: absolute;
+  left: 16px;
+  top: 45px;
+  width: 3px;
+  height: calc(100% - 10px);
+  z-index: 1;
+}
+
+.route-info-section {
+  margin-top: 60px;
+  padding: 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  color: white;
+}
+
+.route-info-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.info-item {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.info-item h4 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.info-item p {
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .route-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .route-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .route-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .route-info-section {
+    padding: 25px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
